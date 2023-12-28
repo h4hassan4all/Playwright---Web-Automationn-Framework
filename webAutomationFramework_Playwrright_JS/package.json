@@ -1,0 +1,26 @@
+{
+  "name": "pwframework",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "webtests": "npx playwright test TC001.spec.js TC002.spec.js TC003.spec.js --headed --project=web",
+    "webtestsreporting": "npx playwright test --grep @Web --reporter=line,allure-playwright --headed --project=web",
+    "showreport": "allure generate ./allure-results --clean && allure open ./allure-report"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@applitools/eyes-playwright": "^1.21.0",
+    "@faker-js/faker": "^8.1.0",
+    "@playwright/test": "^1.38.1",
+    "@types/node": "^20.8.2",
+    "allure-playwright": "^2.9.2"
+  },
+  "dependencies": {
+    "faker": "^6.6.6",
+    "playwright": "^1.38.1",
+    "puppeteer": "^21.3.8"
+  }
+}
